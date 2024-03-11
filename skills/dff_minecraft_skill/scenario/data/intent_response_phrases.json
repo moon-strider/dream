@@ -1,0 +1,41 @@
+{
+  "goto" : [
+    "On my way!"
+  ],
+  "goto_user" : [
+    "Coming!"
+  ],
+  "goto_cursor" : [
+    "Aha!"
+  ],
+  "stop" : [
+    "Gotcha!"
+  ],
+  "destroy_block": [
+    "Affirmative"
+  ],
+  "place_block": [
+    "Here we go!"
+  ],
+  "destroy_and_grab_block": [
+    "Hmm, lemme try"
+  ],
+  "look_at_user": [ 
+    "Yes?"
+  ],
+  "follow_me" : [
+    "Roger that!"
+  ],
+  "build_house" : [
+    "Building a house!"
+  ],
+  "recreate" : [
+    "Working hard!"
+  ],
+  "start_building" : [
+    "How should we start?"
+  ],
+  "finish_building" : [
+    "I loved working on it! What should we call it?"
+  ]
+}
