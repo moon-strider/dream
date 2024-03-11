@@ -1,0 +1,634 @@
+{
+    "human_utter_index_batch": [
+        2
+    ],
+    "dialog_batch": [
+        {
+            "human_utterances": [
+                {
+                    "text": "recommend me a book.",
+                    "annotations": {
+                        "human_goals_detector": [
+                            "get_book_recommendation"
+                        ],
+                        "spelling_preprocessing": "recommend me a book",
+                        "asr": {
+                            "asr_confidence": "undefined"
+                        },
+                        "badlisted_words": {
+                            "bad_words": false
+                        },
+                        "spacy_nounphrases": [
+                            "a book"
+                        ],
+                        "sentseg": {
+                            "punct_sent": "recommend me a book.",
+                            "segments": [
+                                "recommend me a book."
+                            ]
+                        },
+                        "intent_catcher": {
+                            "cant_do": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "choose_topic": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "doing_well": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "dont_understand": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "exit": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "lets_chat_about": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "no": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "opinion_request": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "repeat": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "stupid": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "tell_me_a_story": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "tell_me_more": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "topic_switching": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "weather_forecast_intent": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_are_you_talking_about": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_can_you_do": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_is_your_job": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_is_your_name": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_time": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "where_are_you_from": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "who_made_you": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "yes": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            }
+                        },
+                        "midas_classification": [
+                            {
+                                "appreciation": 0.00655937846750021,
+                                "command": 0.9088528156280518,
+                                "comment": 0.0037734743673354387,
+                                "complaint": 0.006050053983926773,
+                                "dev_command": 0.040921054780483246,
+                                "neg_answer": 0.0011943635763600469,
+                                "open_question_factual": 0.0032737955916672945,
+                                "open_question_opinion": 0.004969623871147633,
+                                "opinion": 0.006247939541935921,
+                                "other_answers": 0.0013568560825660825,
+                                "pos_answer": 0.003005229402333498,
+                                "statement": 0.008221841417253017,
+                                "yes_no_question": 0.005573563277721405
+                            }
+                        ],
+                        "combined_classification": {
+                            "cobot_dialogact_intents": {
+                                "Information_RequestIntent": 0.998980700969696
+                            },
+                            "cobot_dialogact_topics": {
+                                "Entertainment_Books": 0.9998546838760376
+                            },
+                            "cobot_topics": {
+                                "Literature": 0.999790608882904
+                            },
+                            "emotion_classification": {
+                                "neutral": 0.9999549388885498
+                            },
+                            "factoid_classification": {
+                                "is_conversational": 0.9996770620346069
+                            },
+                            "sentiment_classification": {
+                                "neutral": 0.9878842234611511
+                            },
+                            "toxic_classification": {
+                                "not_toxic": 0.9999936819076538
+                            }
+                        },
+                        "topic_recommendation": [
+                            "dff_movie_skill",
+                            "dff_travel_skill",
+                            "dff_music_skill"
+                        ],
+                        "entity_detection": {
+                            "entities": [
+                                "book"
+                            ],
+                            "labelled_entities": [
+                                {
+                                    "label": "misc",
+                                    "offsets": [
+                                        15,
+                                        19
+                                    ],
+                                    "text": "book"
+                                }
+                            ]
+                        },
+                        "ner": [
+                            []
+                        ],
+                        "entity_linking": [],
+                        "kbqa": {
+                            "answer": "",
+                            "confidence": 0.0,
+                            "qa_system": "kbqa"
+                        },
+                        "fact_retrieval": {
+                            "facts": [],
+                            "topic_facts": []
+                        },
+                        "fact_random": {
+                            "facts": [],
+                            "response": "recommend me a book."
+                        },
+                        "sentrewrite": {
+                            "clusters": [],
+                            "modified_sents": [
+                                "hi.",
+                                "Hi, this is a DREAM Socialbot! How are things?",
+                                "recommend me a book."
+                            ]
+                        },
+                        "wiki_parser": {
+                            "animals_skill_entities_info": {},
+                            "entities_info": {},
+                            "topic_skill_entities_info": {},
+                            "utt_num": 2,
+                            "wiki_skill_entities_info": {}
+                        },
+                        "news_api_annotator": [
+                            {
+                                "entity": "all",
+                                "news": {
+                                    "content": "Russia has released former Marine Trevor Reed in a prisoner exchange with the U.S., his family and officials said Wednesday.\n\u201cToday, our prayers have been answered and Trevor is safely on his way back to the United States,\u201d his parents, Joey and Paul... [5983 chars]",
+                                    "description": "Russia has released former Marine Trevor Reed in a prisoner exchange with the U.S., his family and officials said Wednesday.",
+                                    "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2022-04/220427-trevor-reeed-mb-1258-dd851e.jpg",
+                                    "publishedAt": "2022-04-27T13:37:32Z",
+                                    "source": {
+                                        "name": "NBC News",
+                                        "url": "https://www.nbcnews.com"
+                                    },
+                                    "title": "Russia releases former U.S. Marine Trevor Reed in prisoner exchange",
+                                    "url": "https://www.nbcnews.com/news/us-news/russia-releases-us-marine-vet-part-prisoner-exchange-rcna26214"
+                                },
+                                "which": "all"
+                            },
+                            {
+                                "entity": "book",
+                                "news": {
+                                    "content": "The Chens may be well known across Texas for their Austin-based cookie delivery business, Tiff\u2019s Treats, but there is so much more to their story than cookies.\nFounders Tiffany and Leon Chen launched their debut book, It\u2019s Not Just Cookies, earlier t... [2953 chars]",
+                                    "description": "The Chens may be well known across Texas for their Austin-based cookie delivery business, Tiff\u2019s Treats, but there is so much more to their story than cookies.",
+                                    "image": "https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/0RHyBzAqUKt58nYNjMCfatO_cCc=/1200x630/filters:focal(1063x1268:1073x1258):no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/dmn/LXFUCV62UVGPXKNOJ5XSL7OM6M.jpg",
+                                    "publishedAt": "2022-04-27T12:51:00Z",
+                                    "source": {
+                                        "name": "The Dallas Morning News",
+                                        "url": "https://www.dallasnews.com"
+                                    },
+                                    "title": "What\u2019s the Tiff\u2019s Treats secret? Texas company founders share all, including recipes, in first book",
+                                    "url": "https://www.dallasnews.com/food/cooking/2022/04/27/whats-the-tiffs-treats-secret-texas-company-founders-share-all-including-recipes-in-first-book/"
+                                },
+                                "which": "human"
+                            }
+                        ],
+                        "conceptnet": {
+                            "book": {
+                                "SymbolOf": [
+                                    "knowledge",
+                                    "life",
+                                    "wisdom"
+                                ],
+                                "HasProperty": [
+                                    "heavy",
+                                    "expensive",
+                                    "fun"
+                                ],
+                                "Causes": [
+                                    "learn",
+                                    "you learn something new",
+                                    "knowledge"
+                                ],
+                                "CausesDesire": [
+                                    "read",
+                                    "read book",
+                                    "learn"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "text": "fantasy.",
+                    "annotations": {
+                        "human_goals_detector": [
+                            "get_book_recommendation"
+                        ],
+                        "spelling_preprocessing": "fantasy",
+                        "asr": {
+                            "asr_confidence": "undefined"
+                        },
+                        "badlisted_words": {
+                            "bad_words": false
+                        },
+                        "spacy_nounphrases": [
+                            "fantasy"
+                        ],
+                        "sentseg": {
+                            "punct_sent": "fantasy.",
+                            "segments": [
+                                "fantasy."
+                            ]
+                        },
+                        "intent_catcher": {
+                            "cant_do": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "choose_topic": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "doing_well": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "dont_understand": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "exit": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "lets_chat_about": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "no": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "opinion_request": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "repeat": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "stupid": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "tell_me_a_story": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "tell_me_more": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "topic_switching": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "weather_forecast_intent": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_are_you_talking_about": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_can_you_do": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_is_your_job": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_is_your_name": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "what_time": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "where_are_you_from": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "who_made_you": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            },
+                            "yes": {
+                                "confidence": 0.0,
+                                "detected": 0
+                            }
+                        },
+                        "midas_classification": [
+                            {
+                                "appreciation": 0.0009788171155378222,
+                                "command": 0.0006908177747391164,
+                                "comment": 0.0030541690066456795,
+                                "complaint": 0.0006716829957440495,
+                                "dev_command": 0.0005858085351064801,
+                                "neg_answer": 0.0004664334119297564,
+                                "open_question_factual": 0.0005346413236111403,
+                                "open_question_opinion": 0.0008253380656242371,
+                                "opinion": 0.9879195690155029,
+                                "other_answers": 0.0012251210864633322,
+                                "pos_answer": 0.0007625794969499111,
+                                "statement": 0.002001051325351,
+                                "yes_no_question": 0.00028388670762069523
+                            }
+                        ],
+                        "ner": [
+                            []
+                        ],
+                        "entity_detection": {
+                            "entities": [
+                                "fantasy"
+                            ],
+                            "labelled_entities": [
+                                {
+                                    "label": "genre",
+                                    "offsets": [
+                                        0,
+                                        7
+                                    ],
+                                    "text": "fantasy"
+                                }
+                            ]
+                        },
+                        "sentrewrite": {
+                            "clusters": [],
+                            "modified_sents": [
+                                "Hi, this is a DREAM Socialbot! How are things?",
+                                "recommend me a book.",
+                                "What is your favorite genre?",
+                                "fantasy."
+                            ]
+                        },
+                        "combined_classification": {
+                            "cobot_dialogact_intents": {
+                                "Information_DeliveryIntent": 0.9999371767044067
+                            },
+                            "cobot_dialogact_topics": {
+                                "Entertainment_Books": 0.999964714050293
+                            },
+                            "cobot_topics": {
+                                "Movies_TV": 0.9999756813049316
+                            },
+                            "emotion_classification": {
+                                "joy": 0.8848202228546143
+                            },
+                            "factoid_classification": {
+                                "is_conversational": 0.9999959468841553
+                            },
+                            "sentiment_classification": {
+                                "negative": 0.899063229560852
+                            },
+                            "toxic_classification": {
+                                "not_toxic": 0.9999920129776001
+                            }
+                        },
+                        "entity_linking": [],
+                        "topic_recommendation": [
+                            "dff_movie_skill",
+                            "dff_travel_skill",
+                            "dff_music_skill"
+                        ],
+                        "fact_retrieval": {
+                            "facts": [],
+                            "topic_facts": []
+                        },
+                        "fact_random": {
+                            "facts": [],
+                            "response": "fantasy."
+                        },
+                        "kbqa": {
+                            "answer": "",
+                            "confidence": 0.0,
+                            "qa_system": "kbqa"
+                        },
+                        "wiki_parser": {
+                            "animals_skill_entities_info": {},
+                            "entities_info": {},
+                            "topic_skill_entities_info": {},
+                            "utt_num": 3,
+                            "wiki_skill_entities_info": {}
+                        },
+                        "news_api_annotator": [
+                            {
+                                "entity": "all",
+                                "news": {
+                                    "content": "Russia has released former Marine Trevor Reed in a prisoner exchange with the U.S., his family and officials said Wednesday.\n\u201cToday, our prayers have been answered and Trevor is safely on his way back to the United States,\u201d his parents, Joey and Paul... [5983 chars]",
+                                    "description": "Russia has released former Marine Trevor Reed in a prisoner exchange with the U.S., his family and officials said Wednesday.",
+                                    "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2022-04/220427-trevor-reeed-mb-1258-dd851e.jpg",
+                                    "publishedAt": "2022-04-27T13:37:32Z",
+                                    "source": {
+                                        "name": "NBC News",
+                                        "url": "https://www.nbcnews.com"
+                                    },
+                                    "title": "Russia releases former U.S. Marine Trevor Reed in prisoner exchange",
+                                    "url": "https://www.nbcnews.com/news/us-news/russia-releases-us-marine-vet-part-prisoner-exchange-rcna26214"
+                                },
+                                "which": "all"
+                            },
+                            {
+                                "entity": "fantasy",
+                                "news": {
+                                    "content": "On April 12, Final Fantasy XIV patch 6.1 -- titled Newfound Adventure -- went live, the first major update to the game since the release of its latest expansion, Endwalker, back in December. The release of the patch went much smoother than the expans... [4663 chars]",
+                                    "description": "On April 12, Final Fantasy XIV patch 6.1 -- titled Newfound Adventure -- went live, the first major update to the game since the release of its latest expansion, Endwalker, back in December.",
+                                    "image": "https://www.cnet.com/a/img/resize/47caf565c02a4e81212469f4cf51f147ad547c4e/2022/04/27/4224606d-6733-4862-8522-fd71be7b24e9/screen-shot-2022-04-26-at-10-52-31-pm.png?auto=webp&fit=crop&height=630&width=1200",
+                                    "publishedAt": "2022-04-27T14:00:23Z",
+                                    "source": {
+                                        "name": "CNET",
+                                        "url": "https://www.cnet.com"
+                                    },
+                                    "title": "Final Fantasy XIV Continues its Steady Growth by Creating a 'Harmonious Vibe' with Players",
+                                    "url": "https://www.cnet.com/tech/gaming/final-fantasy-xiv-continues-its-steady-growth-by-creating-a-harmonious-vibe-with-players/"
+                                },
+                                "which": "human"
+                            }
+                        ],
+                        "conceptnet": {
+                            "fantasy": {
+                                "SymbolOf": [
+                                    "fantasy",
+                                    "love",
+                                    "art"
+                                ],
+                                "HasProperty": [
+                                    "fun",
+                                    "good",
+                                    "funny"
+                                ],
+                                "Causes": [
+                                    "you get hurt",
+                                    "nightmare",
+                                    "fun"
+                                ],
+                                "CausesDesire": [
+                                    "masturbate",
+                                    "write novel",
+                                    "write story"
+                                ]
+                            }
+                        }
+                    }
+                }
+            ],
+            "bot_utterances": [
+                {
+                    "text": "What is your favorite genre?",
+                    "annotations": {
+                        "sentseg": {
+                            "punct_sent": "What is your favorite genre?",
+                            "segments": [
+                                "What is your favorite genre?"
+                            ]
+                        },
+                        "ner": [
+                            []
+                        ],
+                        "sentrewrite": {
+                            "clusters": [],
+                            "modified_sents": [
+                                "hi.",
+                                "Hi, this is a DREAM Socialbot! How are things?",
+                                "recommend me a book.",
+                                "What is your favorite genre?"
+                            ]
+                        }
+                    },
+                    "active_skill": "dff_book_recommendation_skill"
+                }
+            ]
+        }
+    ],
+    "dff_book_recommendation_skill_state_batch": [
+        {
+            "context": {
+                "actor_state": {},
+                "id": "703f6322-5184-476e-b876-61bb05bc7ebd",
+                "labels": {
+                    "0": [
+                        "book_by_genre",
+                        "q_fav_genre"
+                    ]
+                },
+                "misc": {},
+                "requests": {
+                    "0": "recommend me a book."
+                },
+                "responses": {
+                    "0": "What is your favorite genre?"
+                },
+                "validation": false
+            },
+            "current_turn_dff_suspended": false,
+            "history": {
+                "1": [
+                    "book_by_genre",
+                    "q_fav_genre"
+                ]
+            },
+            "previous_human_utter_index": 1,
+            "shared_memory": {}
+        }
+    ],
+    "dff_shared_state_batch": [
+        {
+            "cross_links": {},
+            "cross_states": {}
+        }
+    ],
+    "entities_batch": [
+        {
+            "fantasy": {
+                "bot_attitude": null,
+                "bot_encounters": [],
+                "human_attitude": "like",
+                "human_encounters": [
+                    {
+                        "full_name": "fantasy",
+                        "human_utterance_index": 2,
+                        "previous_skill_name": "dff_book_recommendation_skill"
+                    }
+                ],
+                "name": "fantasy"
+            }
+        }
+    ],
+    "used_links_batch": [
+        {}
+    ],
+    "age_group_batch": [
+        "unknown"
+    ],
+    "disliked_skills_batch": [
+        [
+            "emotion_skill"
+        ]
+    ],
+    "clarification_request_flag_batch": [
+        false
+    ]
+}
