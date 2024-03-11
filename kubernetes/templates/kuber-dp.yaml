@@ -1,0 +1,116 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ KUBER_DP_NAME }}
+  namespace: {{ NAMESPACE }}
+spec:
+  replicas: {{ REPLICAS }}
+  selector:
+    matchLabels:
+      app: {{ KUBER_DP_NAME }}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ KUBER_DP_NAME }}
+    spec:
+      nodeSelector:
+        gpu: "{{ GPU | string }}"
+        environment: {{ ENVIRONMENT }}
+      containers:
+      - name: alexaservice
+        image: {{ KUBER_IMAGE_TAG }}
+        imagePullPolicy: Always
+        {% if COMMAND %}
+        command: [ 'bash' ]
+        args: [ '-c', '{{ COMMAND }}' ]
+        {% endif %}
+        ports:
+        - name: dp-service
+          protocol: TCP
+          containerPort: {{ PORT }}
+        volumeMounts:
+        - name: volume-podinfo
+          mountPath: /etc/podinfo
+          readOnly: false
+        {% if COMPONENTS_VOLUME %}
+        - name: volume-components
+          mountPath: /root/.deeppavlov
+        {% endif %}
+        env:
+        - name: CUDA_VISIBLE_DEVICES
+          value: {{ CUDA_VISIBLE_DEVICES }}
+        {% for env in ENVS %}
+        - name: {{ env.name }}
+          value: "{{ env.value }}"
+        {% endfor %}
+        {% if WAIT_HOSTS %}
+        - name: WAIT_HOSTS
+          value: "{{ WAIT_HOSTS }}"
+        {% endif %}
+        {% if WAIT_HOSTS_TIMEOUT %}
+        - name: WAIT_HOSTS_TIMEOUT
+          value: "{{ WAIT_HOSTS_TIMEOUT }}"
+        {% endif %}
+        envFrom:
+        - configMapRef:
+            name: env
+        {% if KUBER_DP_NAME == "agent-dp" %}
+        startupProbe:
+          httpGet:
+            path: /ping
+            port: dp-service
+          failureThreshold: 60
+          periodSeconds: 10
+        {% endif %}
+        {% if "program-y" in KUBER_DP_NAME %}
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - |-
+              curl -X POST -s -H 'content-type: application/json' -d ' {"dialogs": [{"utterances": [{"text": "hi", "user": {"user_type": "human"}}, {"text": "do you have a boyfriend", "user": {"user_type": "human"}}], "bot_utterances": [{"text": "hi", "user": {"user_type": "human"}}, {"text": "do you have a boyfriend", "user": {"user_type": "human"}}], "human_utterances": [{"text": "hi", "user": {"user_type": "human"}}, {"text": "do you have a boyfriend", "user": {"user_type": "human"}}]}]}' http://localhost:{{ PORT }}/api/rest/v1.0/ask -o /dev/null -w '%{http_code}
+              ' | grep -c 200
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          failureThreshold: 1
+        {% endif %}
+        {% if resources %}
+        resources:
+          {% if 'limits' in resources %}
+          limits:
+            {% if 'memory' in resources.limits %}
+            memory: {{ resources.limits.memory }}
+            {% endif %}
+            {% if 'cpu' in resources.limits %}
+            cpu: {{ resources.limits.cpu }}
+            {% endif %}
+          {% endif %}
+          {% if 'reservations' in resources %}
+          requests:
+            {% if 'memory' in resources.reservations %}
+            memory: {{ resources.reservations.memory }}
+            {% endif %}
+            {% if 'cpu' in resources.reservations %}
+            cpu: {{ resources.reservations.cpu }}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      volumes:
+      #- name: volume-logs
+        #persistentVolumeClaim:
+          #claimName: logs-hostpath-pvc
+      - name: volume-components
+        persistentVolumeClaim:
+          claimName: components-claim-{{ ENVIRONMENT | lower }}
+      - name: volume-podinfo
+        downwardAPI:
+          items:
+          - path: "labels"
+            fieldRef:
+              fieldPath: metadata.labels
+          - path: "annotations"
+            fieldRef:
+              fieldPath: metadata.annotations

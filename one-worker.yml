@@ -1,0 +1,286 @@
+services:
+  agent:
+    deploy:
+      mode: replicated
+      replicas: 1
+  cobotqa:
+    deploy:
+      mode: replicated
+      replicas: 1
+  cobot-convers-evaluator-annotator:
+    deploy:
+      mode: replicated
+      replicas: 1
+  cobot-nounphrases:
+    deploy:
+      mode: replicated
+      replicas: 1
+  program-y:
+    deploy:
+      mode: replicated
+      replicas: 1
+  personality-catcher:
+    deploy:
+      mode: replicated
+      replicas: 1
+  sentseg:
+    deploy:
+      mode: replicated
+      replicas: 1
+  convers-evaluation-selector:
+    deploy:
+      mode: replicated
+      replicas: 1
+  sentrewrite:
+    deploy:
+      mode: replicated
+      replicas: 1
+  intent-responder:
+    deploy:
+      mode: replicated
+      replicas: 1
+  intent-catcher:
+    deploy:
+      mode: replicated
+      replicas: 1
+  blacklisted-words:
+    deploy:
+      mode: replicated
+      replicas: 1
+  program-y-dangerous:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-movie-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  ner:
+    deploy:
+      mode: replicated
+      replicas: 1
+  eliza:
+    deploy:
+      mode: replicated
+      replicas: 1
+  convert-reddit:
+    deploy:
+      mode: replicated
+      replicas: 1
+  personal-info-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  asr:
+    deploy:
+      mode: replicated
+      replicas: 1
+  misheard-asr:
+    deploy:
+      mode: replicated
+      replicas: 1
+  book-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  weather-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  emotion-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dummy-skill-dialog:
+    deploy:
+      mode: replicated
+      replicas: 1
+  comet-atomic:
+    deploy:
+      mode: replicated
+      replicas: 1
+  comet-conceptnet:
+    deploy:
+      mode: replicated
+      replicas: 1
+  meta-script-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  short-story-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  coronavirus-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  small-talk-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  game-cooperative-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  program-y-wide:
+    deploy:
+      mode: replicated
+      replicas: 1
+  news-api-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  news-api-annotator:
+    deploy:
+      mode: replicated
+      replicas: 1
+  factoid-qa:
+    deploy:
+      mode: replicated
+      replicas: 1
+  entity-linking:
+    deploy:
+      mode: replicated
+      replicas: 1
+  wiki-parser:
+    deploy:
+      mode: replicated
+      replicas: 1
+  text-qa:
+    deploy:
+      mode: replicated
+      replicas: 1
+  kbqa:
+    deploy:
+      mode: replicated
+      replicas: 1
+  factoid-classification:
+    deploy:
+      mode: replicated
+      replicas: 1
+  spelling-preprocessing:
+    deploy:
+      mode: replicated
+      replicas: 1
+  grounding-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  knowledge-grounding:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-gaming-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-friendship-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  masked-lm:
+    deploy:
+      mode: replicated
+      replicas: 1
+  entity-storer:
+    deploy:
+      mode: replicated
+      replicas: 1
+  knowledge-grounding-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  combined-classification:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-animals-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-travel-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-sport-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-food-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-science-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-music-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-gossip-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  midas-classification:
+    deploy:
+      mode: replicated
+      replicas: 1
+  fact-retrieval:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-art-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  hypothesis-scorer:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-bot-persona-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-funfact-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  dff-wiki-skill:
+    deploy:
+      mode: replicated
+      replicas: 1
+  topic-recommendation:
+    deploy:
+      mode: replicated
+      replicas: 1
+  user-persona-extractor:
+    deploy:
+      mode: replicated
+      replicas: 1
+  wiki-facts:
+    deploy:
+      mode: replicated
+      replicas: 1
+  speech-function-classifier:
+    deploy:
+      mode: replicated
+      replicas: 1
+  speech-function-predictor:
+    deploy:
+      mode: replicated
+      replicas: 1
+  personality-detection:
+    deploy:
+      mode: replicated
+      replicas: 1
+  fact-random:
+    deploy:
+      mode: replicated
+      replicas: 1
+  entity-detection:
+    deploy:
+      mode: replicated
+      replicas: 1
+version: '3.7'

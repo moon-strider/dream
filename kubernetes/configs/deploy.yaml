@@ -1,0 +1,57 @@
+combined-classification:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 2
+
+kbqa:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 2
+
+factoid-classification:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 0
+
+text-qa:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 2
+
+comet-atomic:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 2
+
+comet-conceptnet:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 0
+
+entity-linking:
+  CUDA_VISIBLE_DEVICES: "''"
+
+wiki-parser:
+  CUDA_VISIBLE_DEVICES: "''"
+
+knowledge-grounding:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 1
+
+midas-classification:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 0
+
+masked-lm:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 1
+
+fact-retrieval:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 1
+
+hypothesis-scorer:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 1
+
+topic-recommendation:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 1
+
+speech-function-classifier:
+  CUDA_VISIBLE_DEVICES: '0'
+  gpu: 0
