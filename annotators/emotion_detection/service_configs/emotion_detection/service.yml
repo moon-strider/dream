@@ -1,0 +1,28 @@
+name: emotion-detection
+endpoints:
+- model
+compose:
+  env_file:
+  - .env
+  build:
+    args:
+      SERVICE_PORT: 8045
+      SERVICE_NAME: emotion_detection
+      VIDEO_PRETRAINED: "microsoft/xclip-base-patch32"
+      TEXT_PRETRAINED: "bert-large-uncased"
+      MULTIMODAL_MODEL: "final_model.pt"
+      MODEL_PATH: "/data/"
+      PREFIX: "Detect emotions:"
+    context: .
+    dockerfile: ./annotators/emotion_detection/Dockerfile
+  command: uvicorn server:app --host 0.0.0.0 --port 8045
+  deploy:
+    resources:
+      limits:
+        memory: 1G
+      reservations:
+        memory: 1G
+  environment:
+      - CUDA_VISIBLE_DEVICES=0
+  ports:
+  - 8045:8045
