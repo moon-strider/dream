@@ -1,0 +1,63 @@
+[
+    [
+        "Anyway, let's talk about something else!",
+        0.85,
+        {
+            "dff_bakery_skill_state": {
+                "shared_memory": {},
+                "previous_human_utter_index": 1,
+                "history": {
+                    "0": [
+                        "bakery_general",
+                        "bakery_start"
+                    ],
+                    "1": [
+                        "global_flow",
+                        "fallback"
+                    ]
+                },
+                "current_turn_dff_suspended": false,
+                "context": {
+                    "id": "10081e6a-0e7e-4e41-beeb-03e315ade924",
+                    "labels": {
+                        "0": [
+                            "bakery_general",
+                            "bakery_start"
+                        ],
+                        "1": [
+                            "global_flow",
+                            "fallback"
+                        ]
+                    },
+                    "requests": {
+                        "0": "let's talk about ciabatta.",
+                        "1": "what ingredients are in an apple pie?"
+                    },
+                    "responses": {
+                        "0": "Our bakery is happy to help! What would you like to know?",
+                        "1": "Anyway, let's talk about something else!"
+                    },
+                    "misc": {
+                        "slots": {
+                            "topic": "science",
+                            "user_name": "Gordon Freeman"
+                        }
+                    },
+                    "validation": false,
+                    "actor_state": {}
+                }
+            },
+            "dff_shared_state": {
+                "cross_links": {},
+                "cross_states": {}
+            },
+            "used_links": {},
+            "age_group": "unknown",
+            "disliked_skills": []
+        },
+        {},
+        {
+            "can_continue": "can"
+        }
+    ]
+]
