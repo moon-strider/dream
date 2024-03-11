@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  agent:
+    env_file:
+      - .env
+      - .env_secret
+    environment:
+      - AGENT_CHANNEL=ms
+  https:
+    depends_on:
+      - agent
+    image: https_proxy
+    build:
+      context: dp/https/
+    env_file: .env_secret
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - 443:443

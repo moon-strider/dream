@@ -1,0 +1,12 @@
+[
+    {"command": "/summary", "title": "Medium-Length Summary"},
+    {"command": "/short_summary", "title": "Short Summary"},
+    {"command": "/long_summary", "title": "Detailed Summary"},
+    {"command": "/problems", "title": "Problems Discussed"},
+    {"command": "/current_tasks", "title": "Current Tasks"},
+    {"command": "/completed_tasks", "title": "Completed Tasks"},
+    {"command": "/decisions", "title": "Key Decisions"},
+    {"command": "/progress_by_areas", "title": "Progress Overview"},
+    {"command": "/weekly_report", "title": "Weekly Report"},
+    {"command": "/full_report", "title": "Full Report"}
+]

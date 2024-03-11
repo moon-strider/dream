@@ -1,0 +1,34 @@
+name: openai-api-davinci3
+endpoints:
+- ping
+- envvars_to_send
+- max_tokens
+- respond
+- generate_goals
+compose:
+  env_file:
+  - .env
+  - .env_azure
+  build:
+    args:
+      SERVICE_PORT: 8131
+      SERVICE_NAME: openai_api_davinci3
+      PRETRAINED_MODEL_NAME_OR_PATH: text-davinci-003
+      FLASK_APP: server
+    context: .
+    dockerfile: ./services/openai_api_lm/Dockerfile
+  command: flask run -h 0.0.0.0 -p 8131
+  environment:
+  - FLASK_APP=server
+  deploy:
+    resources:
+      limits:
+        memory: 100M
+      reservations:
+        memory: 100M
+  volumes:
+  - ./services/openai_api_lm:/src
+  - ./common:/src/common
+  ports:
+  - 8131:8131
+proxy: null

@@ -1,0 +1,27 @@
+FROM python:3.10
+
+RUN mkdir /src
+
+COPY ./skill_selectors/llm_based_skill_selector/requirements.txt /src/requirements.txt
+RUN pip install -r /src/requirements.txt
+
+ARG SERVICE_PORT
+ENV SERVICE_PORT ${SERVICE_PORT}
+ARG GENERATIVE_SERVICE_URL
+ENV GENERATIVE_SERVICE_URL ${GENERATIVE_SERVICE_URL}
+ARG GENERATIVE_TIMEOUT
+ENV GENERATIVE_TIMEOUT ${GENERATIVE_TIMEOUT}
+ARG GENERATIVE_SERVICE_CONFIG
+ENV GENERATIVE_SERVICE_CONFIG ${GENERATIVE_SERVICE_CONFIG}
+ARG N_UTTERANCES_CONTEXT=5
+ENV N_UTTERANCES_CONTEXT ${N_UTTERANCES_CONTEXT}
+ARG PROMPT_FILE
+ENV PROMPT_FILE ${PROMPT_FILE}
+
+COPY skill_selectors/llm_based_skill_selector /src
+WORKDIR /src
+COPY ./common/ ./common/
+COPY ./components/ ./components/
+
+
+CMD gunicorn --workers=1 server:app -b 0.0.0.0:${SERVICE_PORT} --timeout=1200

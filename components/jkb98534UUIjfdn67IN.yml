@@ -1,0 +1,27 @@
+name: doc_retriever
+display_name: Document Retriever (return candidates)
+component_type: null
+model_type: null
+is_customizable: false
+author: publisher@deeppavlov.ai
+description: Ranks chunks of the input document based on their relevance to the user's request and returns top N most relevant.
+ram_usage: 10G
+gpu_usage: null
+group: annotators
+connector:
+  protocol: http
+  timeout: 30.0
+  url: http://doc-retriever:8165/return_candidates
+dialog_formatter: state_formatters.dp_formatters:cropped_dialog
+response_formatter: state_formatters.dp_formatters:simple_formatter_service
+previous_services:
+- annotators.doc_processor
+- annotators.vectorize_documents
+required_previous_services:
+- annotators.doc_processor
+- annotators.vectorize_documents
+state_manager_method: add_annotation
+tags: null
+endpoint: return_candidates
+service: annotators/doc_retriever/service_configs/doc-retriever
+date_created: "2023-06-14T12:45:32"

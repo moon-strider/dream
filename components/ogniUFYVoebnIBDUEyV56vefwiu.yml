@@ -1,0 +1,34 @@
+name: dff_document_qa_llm_skill
+display_name: LLM-based Q&A on Documents Skill
+component_type: Generative
+model_type: NN-based
+is_customizable: false
+author: publisher@deeppavlov.ai
+description: This skill answers the user's questions about a given document or meeting transcript.
+  It only has access to most relevant parts of the document, not to the entire document. This skill is
+  always selected if a question is asked about the meeting.
+ram_usage: 128M
+gpu_usage: null
+group: skills
+connector:
+  protocol: http
+  timeout: 120.0
+  url: http://dff-document-qa-llm-skill:8166/respond
+dialog_formatter:
+  name: state_formatters.dp_formatters:dff_prompted_skill_formatter
+  skill_name: dff_document_qa_llm_skill
+response_formatter: state_formatters.dp_formatters:skill_with_attributes_formatter_service
+previous_services:
+  - skill_selectors
+  - annotators.doc_processor
+  - annotators.vectorize_documents
+  - annotators.doc_retriever
+required_previous_services:
+  - annotators.doc_processor
+  - annotators.vectorize_documents
+  - annotators.doc_retriever
+state_manager_method: add_hypothesis
+tags: null
+endpoint: respond
+service: skills/dff_document_qa_llm_skill/service_configs/dff-document-qa-llm-skill
+date_created: "2023-03-16T09:45:32"
