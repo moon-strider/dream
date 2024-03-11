@@ -1,0 +1,32 @@
+{
+    "google_api": {
+        "description": "Google API utilizes Google to respond to a wide variety of questions.",
+        "needs_approval": "True",
+        "input_template": "Just the request in a string format"
+    },
+    "generative_lm": {
+        "description": "This service uses language models to generate responses.",
+        "needs_approval": "False",
+        "input_template": "Just the request in a string format"
+    },
+    "weather_api": {
+        "description": "The Weather API can provide current weather information for a given location.",
+        "needs_approval": "False",
+        "input_template": "Just the request in a string format"
+    },
+    "news_api": {
+        "description": "The News API can provide trending news.",
+        "needs_approval": "False",
+        "input_template": "Just the request in a string format"
+    },
+    "wolframalpha_api": {
+        "description": "The WolframAlpha API can perform calculations and do math.",
+        "needs_approval": "False",
+        "input_template": "Equation that needs to be solved. DON'T RETURN ANY TEXT. Examples: '5 + 2', '7 + 2x = 12 - 3x'"
+    },
+    "arxiv_api": {
+        "description": "arxiv API can search for latest articles on requested keyword.",
+        "needs_approval": "False",
+        "input_template": "Return only the keyword that is needed to be searched for. E.g., 'ChatGPT', 'dialog systems'."
+    }
+}
